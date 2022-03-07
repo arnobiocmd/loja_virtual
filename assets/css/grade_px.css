@@ -1,0 +1,80 @@
+.rows{
+	width:100%;
+	display:inline-block;
+	margin:5px 0
+}
+.conteudo.grade{
+	width:960px;
+	margin:0 auto;
+	display:block;
+	background:url(../img/grid-0.png) no-repeat;
+	border:solid 1px red;
+}
+.linha{
+	border:solid 1px #999;
+}
+.cel12{
+	width:60px;
+	float:left;
+    margin-left:20px;
+     
+}
+.cel12:first-child,
+.cel2:first-child,
+.cel3:first-child,
+.cel6:first-child,
+.cel4:first-child,
+.cel8:first-child,
+.cel9:first-child,
+.cel10:first-child,
+.cel11:first-child{
+    margin-left:0px;
+}
+.cel6{
+	width:460px;
+	float:left;
+    margin-left:20px;
+     
+}
+.cel4{
+	width:300px;
+	float:left;
+    margin-left:20px;
+     
+}
+.cel3{
+	width:220px;
+	float:left;
+    margin-left:20px;
+     
+}
+.cel2{
+	width:140px;
+	float:left;
+    margin-left:20px;
+     
+}
+.cel8{
+	width:620px;
+	float:left;
+    margin-left:20px;
+     
+}
+.cel9{
+	width:700px;
+	float:left;
+    margin-left:20px;
+     
+}
+.cel10{
+	width:780px;
+	float:left;
+    margin-left:20px;
+     
+}
+.cel11{
+	width:860px;
+	float:left;
+    margin-left:20px;
+     
+}
