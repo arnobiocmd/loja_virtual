@@ -64,9 +64,8 @@ function excluirItem(obj){
        data:{id_item :id_item},
        dataType:'json',
        success:function(){
-        soma = soma - subtotal;
         $(obj).closest("tr").remove();
-        $('#valorTotal').html(soma);
+        atualizarTotal();
        } 
     });
 
@@ -74,13 +73,39 @@ function excluirItem(obj){
 }
 
 function atualizarSubtotal(obj){
-    var id_produto = $(obj).attr("data-idProduto");
-    var preco = $(obj).attr(" data-preco");
-    var qtde  = $(obj).val();
+    var id_item  = $(obj).attr("data-idItem");
+    var preco       = $(obj).attr("data-preco");
+    var qtde        = $(obj).val();
 
     if(qtde <=0){
         $(obj).val(1);
         qtde = 1;
     }
 
+    var subtotal = qtde * preco;
+    $.ajax({
+        url: base_url + "carrinho/alterarItem",
+        type:'POST',
+        data:{id_item :id_item,qtde:qtde},
+        dataType:'json',
+        success:function(){
+            $(obj).closest("tr").find(".subtotal").html("R$ " + subtotal);
+            atualizarTotal();
+        } 
+     });
+    
+    
+
+}
+
+function atualizarTotal(){
+    var total = 0;
+
+    for(var i=0; i<$('.p_quant').length; i++){
+        var quant = $('.p_quant').eq(i);
+        var preco = quant.attr("data-preco");
+        var subtotal = preco * parseInt(quant.val());
+        total += subtotal;
+    }
+    $("#valorTotal").html(total);
 }

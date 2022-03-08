@@ -16,4 +16,9 @@ class CarrinhoService{
             $dao = new CarrinhoDao();
             return $dao->excluir($id_item);
         }
+
+        public static function atualizarItem($id_item, $qtde){
+            $dao = new CarrinhoDao();
+            return $dao->atualizarItem($id_item, $qtde);
+        }
     }

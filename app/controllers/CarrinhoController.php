@@ -55,4 +55,13 @@ class CarrinhoController extends Controller{
 
         echo json_encode($eic);
     }
+
+
+    public function alterarItem(){
+        $id_item = isset($_POST['id_item']) ? strip_tags(filter_input(INPUT_POST , "id_item")) : null;
+        $qtde = isset($_POST['qtde']) ? strip_tags(filter_input(INPUT_POST , "qtde")) : null;
+        $resul = CarrinhoService::atualizarItem($id_item, $qtde);
+
+        echo json_encode($resul);
+    }
 }

@@ -38,9 +38,9 @@
                             <td align="center"><?php echo $produto->preco?></td>
                             <td align="center"><input type="number" min="1"
                             name="<?php echo $produto->id_produto?>"
-                            data-idProduto ="<?php echo $produto->id_produto?>"
+                            data-idItem ="<?php echo $produto->id_item_carrinho?>"
                             data-preco = "<?php echo $produto->preco?>"
-                            value="<?php echo $produto->qtde?>" class="qtd" onchange="atualizarSubtotal(this)"> </td>
+                            value="<?php echo $produto->qtde?>" class="qtd p_quant" onchange="atualizarSubtotal(this)"> </td>
                             <td align="center" class="subtotal"><?php echo $subtotal  ?></td>
                             <td align="center"><a href="" class="atualizar"></a></td>
                             
@@ -169,6 +169,3 @@
     </div>
 </div>
 
-<script>
-    var soma = <?php echo $total ?>
-</script>

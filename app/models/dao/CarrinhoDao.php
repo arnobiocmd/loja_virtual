@@ -20,4 +20,12 @@ class CarrinhoDao extends Model{
         $qry->bindValue(":id_item_carrinho",$id_item);
         $qry->execute();
     }
+
+    public function atualizarItem($id_item, $qtde){
+        $sql = "UPDATE item_carrinho SET qtde = :qtde WHERE id_item_carrinho = :id_item_carrinho";
+        $qry = $this->db->prepare($sql);
+        $qry->bindValue(":qtde",$qtde);
+        $qry->bindValue(":id_item_carrinho",$id_item);
+        $qry->execute();
+    }
 }
