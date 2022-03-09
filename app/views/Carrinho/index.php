@@ -158,7 +158,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="cel3" style="float:none; margin:0 auto"><a href="finalizar.html" class="btn finaliza">Finalizar Compra</a><a></a></div>
+                    <div class="cel3" style="float:none; margin:0 auto"><a href="<?php echo URL_BASE."carrinho/finalizar"?>" class="btn finaliza">Finalizar Compra</a><a></a></div>
 
 
                 </div>

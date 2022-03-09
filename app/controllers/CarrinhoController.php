@@ -64,4 +64,18 @@ class CarrinhoController extends Controller{
 
         echo json_encode($resul);
     }
+
+    public function finalizar(){
+        $dados['categorias'] = CategoriaService::listaPorProduto(); 
+        $id_carrinho = isset($_SESSION["ID_CARRINHO"]) ? $_SESSION["ID_CARRINHO"] : null;
+        if(!$id_carrinho){
+            $this->redirect(URL_BASE);
+        }
+
+        $dados['lista'] = ItemcarrinhoService::lista($id_carrinho);
+       
+        
+        $dados["view"] = 'Carrinho/Finalizar';
+        $this->load("template",$dados);
+    }
 }

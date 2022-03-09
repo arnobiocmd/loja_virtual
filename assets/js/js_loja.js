@@ -107,5 +107,5 @@ function atualizarTotal(){
         var subtotal = preco * parseInt(quant.val());
         total += subtotal;
     }
-    $("#valorTotal").html(total);
+    $("#valorTotal").html("R$ "+total);
 }
