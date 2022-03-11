@@ -2,7 +2,7 @@
     <div class="rows">
         <ul class="barra-topo cel10">
             <li><a href="<?php echo URL_BASE?>">Home</a></li>
-            <li><a href="frm_cadastro.html">cadastro</a></li>
+            <li><a href="<?php echo URL_BASE."cliente"?>">cadastro</a></li>
             <li><a href="frm-login.html">login</a></li>
             <li class="usuario"><a href=""><i class="icouser"></i>Arnobio Paulino fernandes</a>
                 <ul>

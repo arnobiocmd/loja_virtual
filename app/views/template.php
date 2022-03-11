@@ -59,6 +59,12 @@
         </div>
        <?php include("rodape.php")?>
     </div>
+
+    <script src="<?php echo URL_BASE ?>assets/js/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/js/datatables/js/dataTables.responsive.min.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/js/jquery.mask.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/js/componentes/js_data_table.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/js/componentes/js_mascara.js"></script>
 </body>
 
 </html>
